@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{header}} Order Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-content">
+  <ion-card class="page-card">
+    <ion-card-content padding>
+
+      <ion-item lines="none">
+        <ion-col size="4" align-items-start>
+          <ion-label class="required">District</ion-label>
+        </ion-col>
+        <ion-row class="width-100">
+          <ion-col align-items-start>
+            <ion-select class="no-padding-margin padidng-left-10 width-100" [interfaceOptions]="customPopoverOptions"
+              interface="popover" [(ngModel)]="selectDistrict" placeholder="Select One">
+              <ion-select-option value="Ahmedabad">Ahmedabad</ion-select-option>
+              <ion-select-option value="Baroda">Baroda</ion-select-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+      <ion-item lines="none" align-items-start>
+        <ion-col size="4">
+          <ion-label class="required">Block</ion-label>
+        </ion-col>
+        <ion-row class="width-100">
+          <ion-col align-items-start>
+            <ion-select class="no-padding-margin padidng-left-10 width-100" [interfaceOptions]="customPopoverOptions"
+              interface="popover" placeholder="Select One" [(ngModel)]="selectBlock">
+              <ion-select-option value="Block 01">Block 01</ion-select-option>
+              <ion-select-option value="Block 02">Block 02</ion-select-option>
+              <ion-select-option value="Block 03">Block 03</ion-select-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+      <ion-item align-items-start lines="none">
+        <ion-col size="4">
+          <ion-label class="required">Product</ion-label>
+        </ion-col>
+        <ion-row class="width-100">
+          <ion-col align-items-start>
+            <ion-select class="no-padding-margin padidng-left-10 width-100" [interfaceOptions]="customPopoverOptions"
+              interface="popover" placeholder="Select One" [(ngModel)]="selectProduct">
+              <ion-select-option value="Product 01">Product 01</ion-select-option>
+              <ion-select-option value="Product 02">Product 02</ion-select-option>
+              <ion-select-option value="Product 03">Product 03</ion-select-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-col size="4">
+          <ion-label class="required">Qty.</ion-label>
+        </ion-col>
+        <ion-row class="width-100">
+          <ion-col align-items-start>
+            <ion-input  placeholder="please give Quantity" [(ngModel)]="quantity"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer class="page-card">
+  <ion-row text-center>
+    <ion-col>
+      <ion-button (click)="delete()" color="danger">Delete</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button (click)="goBack()" color="success">Save</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button (click)="goBack()" color="primary">Cancel</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

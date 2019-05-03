@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-toolbar class="page-toolbar">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        Member Login-up
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="page-content backgroundBlur" padding>
+    <ion-card class="page-card">
+      <ion-card-content>
+        <ion-grid>
+  
+          <form [formGroup]="memberLoginForm">
+            <ion-item class="page-items">
+              <ion-row class="width-100" justify-content-center align-item-center>
+                <ion-col align-self-end size="2" class="required">
+                  <ion-icon name="ribbon" class="marginLabel"></ion-icon>
+                </ion-col>
+                <ion-col class="ion-align-items-start ion-text-uppercase">
+                  <ion-input placeholder="Enter Email" formControlName="email"></ion-input>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <br>
+            <ion-item class="page-items">
+              <ion-row class="width-100">
+                <ion-col align-self-end size="2" class="required">
+                  <ion-icon class="marginLabel" name="call"></ion-icon>
+                </ion-col>
+                <ion-col class="ion-align-items-start">
+                  <ion-input type="tel" maxlength="10" placeholder="Enter Password" formControlName="password">
+                  </ion-input>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+  
+            <ion-row>
+              <ion-col padding-top text-center>
+                <ion-button class="page-button" round strong (click)="submitOtp()"> Get OTP </ion-button>
+              </ion-col>
+            </ion-row>
+          </form>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>

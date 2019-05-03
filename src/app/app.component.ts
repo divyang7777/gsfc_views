@@ -6,7 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html'
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
   public appPages = [
@@ -19,6 +20,11 @@ export class AppComponent {
       title: 'List',
       url: '/list',
       icon: 'list'
+    },
+    {
+      title: 'Logout',
+      url: '/list',
+      icon: 'exit'
     }
   ];
 
@@ -32,7 +38,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
+      this.statusBar.styleBlackTranslucent();
       this.splashScreen.hide();
     });
   }

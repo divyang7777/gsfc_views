@@ -1,0 +1,28 @@
+:host {
+    .page-content{
+        --background: #555c66;
+      }
+    .padding-left-10 {
+        padding-left: 10 !important;
+    }
+
+    .width-100 {
+        width: 100%;
+    }
+    ion-label{
+        color: black;
+      }
+      ion-title{
+        color: black;
+      }
+}
+
+.no-wall {
+    --background: none;
+    background: none;
+  }
+
+.page-card{
+    --background: white;
+    color: black;
+}

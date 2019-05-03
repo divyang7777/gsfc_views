@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  openPartOne() {
+    console.log('Part 01 !');
+    
+  }
+
+  openPartTwo() {
+    console.log('Part 02 !');
+  }
+
 }

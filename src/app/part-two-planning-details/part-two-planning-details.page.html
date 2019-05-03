@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Planning Gujarat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-content">
+  <div>
+    <ion-list class="no-wall">
+
+      <ion-card class="page-card" [routerLink]="['/part-two-planning-details-list']">
+        <ion-card-header>
+          <ion-grid>
+            <ion-row>
+              <ion-col text-center>
+                <ion-label>Planning 01</ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col text-center col-4>
+                <ion-card color="danger" class="page-card card-height">
+                  <ion-card-content>
+                    <ion-label><b>Orders</b></ion-label>
+                    <br>
+                    <ion-label>₹ 12</ion-label>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+              <ion-col text-center col-4>
+                <ion-card color="danger" class="page-card card-height">
+                  <ion-card-content>
+                    <ion-label><b>Loss</b></ion-label>
+                    <br>
+                    <ion-label>₹ 20k</ion-label>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+              <ion-col text-center col-4>
+                <ion-card color="danger" class="page-card card-height">
+                  <ion-card-content>
+                    <ion-label><b>Dest.</b></ion-label>
+                    <br>
+                    <ion-label>10</ion-label>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="page-card" [routerLink]="['/part-two-planning-details-list']">
+        <ion-card-header>
+          <ion-grid>
+            <ion-row>
+              <ion-col text-center>
+                <ion-label>Planning 02</ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col text-center col-4>
+                <ion-card color="danger" class="page-card card-height">
+                  <ion-card-content>
+                    <ion-label><b>Orders</b></ion-label>
+                    <br>
+                    <ion-label>₹ 12</ion-label>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+              <ion-col text-center col-4>
+                <ion-card color="danger" class="page-card card-height">
+                  <ion-card-content>
+                    <ion-label><b>Loss</b></ion-label>
+                    <br>
+                    <ion-label>₹ 20k</ion-label>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+              <ion-col text-center col-4>
+                <ion-card color="danger" class="page-card card-height">
+                  <ion-card-content>
+                    <ion-label><b>Dest.</b></ion-label>
+                    <br>
+                    <ion-label>10</ion-label>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-fab slot="fixed" vertical="bottom" horizontal="end" #fab>
+  <ion-fab-button [routerLink]="['/create-planning']">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

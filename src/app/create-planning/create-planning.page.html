@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{header}} Planning</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-content">
+  <ion-card class="page-card">
+    <ion-card-content>
+      <ion-grid>
+        <ion-item lines="none">
+          <ion-col>
+            <ion-input padding type="text" class="width-100" [(ngModel)]="planningText" placeholder="Enter Title">
+            </ion-input>
+          </ion-col>
+          <ion-col col-2>
+            <ion-datetime class="ion-float-right" display-format="MMM DD, YYYY" [(ngModel)]="planningDate" placeholder="Select Date">
+            </ion-datetime>
+          </ion-col>
+        </ion-item>
+
+      </ion-grid>
+      <ion-searchbar></ion-searchbar>
+
+      <ion-list>
+        <ion-item-divider>
+          <ion-col text-center>
+            <b>Order Details</b>
+          </ion-col>
+        </ion-item-divider>
+        <ion-item text-center>
+          <ion-col col-4>
+            <ion-label><b>Dest.</b></ion-label>
+          </ion-col>
+          <ion-col col-4>
+            <ion-label><b>Product</b></ion-label>
+          </ion-col>
+          <ion-col col-4>
+            <ion-label><b>Qty.</b></ion-label>
+          </ion-col>
+          <!-- <ion-col text-center col-4>
+            <ion-label><b>Loss</b></ion-label>
+          </ion-col> -->
+        </ion-item>
+        <ion-item text-center (click)="openEditPlanning()">
+          <ion-col col-4>
+            <ion-label>
+              Kakariya
+            </ion-label>
+          </ion-col>
+          <ion-col col-4>
+            <ion-label>
+              Urea
+            </ion-label>
+          </ion-col>
+          <ion-col col-4>
+            <ion-label>
+              300
+            </ion-label>
+          </ion-col>
+        </ion-item>
+        <ion-item text-center lines="none" (click)="openEditPlanning()">
+          <ion-col col-4>
+            <ion-label>
+              Boroda
+            </ion-label>
+          </ion-col>
+          <ion-col col-4>
+            <ion-label>
+              Urea
+            </ion-label>
+          </ion-col>
+          <ion-col col-4>
+            <ion-label>
+              500
+            </ion-label>
+          </ion-col>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-fab slot="fixed" vertical="bottom" horizontal="end" #fab>
+  <ion-fab-button [routerLink]="['/dropdown-selection']">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

@@ -1,0 +1,181 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Simulate Details Planning</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-content">
+  <ion-card class="page-card">
+    <ion-card-content>
+
+      <ion-row>
+        <ion-col col-4>
+          <ion-label>District :</ion-label><br>
+          <ion-label class="font-20">Ahmedabad</ion-label>
+        </ion-col>
+        <ion-col col-4>
+          <ion-label>Block :</ion-label><br>
+          <ion-label class="font-20">Kankaria</ion-label>
+        </ion-col>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-col col-3>
+          <ion-label>Product :</ion-label><br>
+          <ion-label class="font-20">Urea</ion-label>
+        </ion-col>
+        <ion-col col-3>
+          <ion-label>Qty. :</ion-label><br>
+          <ion-label class="font-20">200 T</ion-label>
+        </ion-col>
+        <ion-col col-3>
+          <ion-label>Govt reimbust :</ion-label><br>
+          <ion-label class="font-20">₹ 125</ion-label>
+        </ion-col>
+      </ion-row>
+
+    </ion-card-content>
+  </ion-card>
+  <hr>
+  <ion-row text-center class="white-fonts padding-0">
+    <ion-col col-2>
+      <ion-label class="font-15">
+        Baroda => Baroda
+      </ion-label>
+    </ion-col>
+    <ion-col col-2>
+      <ion-label class="font-15">
+        Baroda => Baroda
+      </ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="padding-0">
+    <ion-col col-6>
+      <ion-card (click)="goBack(0)" *ngIf="selected[0]" color="primary" class="padding-0 page-card">
+        <ion-card-content text-center>
+          <ion-label>Agreed Rate : ₹ 130</ion-label><br>
+          <hr>
+          <ion-label class="font-30">₹ 20/uT</ion-label><br>
+          <hr>
+          <ion-label>Total loss : ₹ 10</ion-label><br>
+        </ion-card-content>
+      </ion-card>
+      <ion-card (click)="goBack(0)" *ngIf="!selected[0]" class="padding-0 page-card">
+        <ion-card-content text-center>
+          <ion-label>Agreed Rate : ₹ 130</ion-label><br>
+          <hr>
+          <ion-label class="font-30">₹ 20/uT</ion-label><br>
+          <hr>
+          <ion-label>Total loss : ₹ 10</ion-label><br>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col col-6>
+      <ion-card (click)="goBack(1)" *ngIf="selected[1]" color="primary" class="padding-0 page-card">
+        <ion-card-content text-center>
+          <ion-label>Agreed Rate : ₹ 130</ion-label><br>
+          <hr>
+          <ion-label class="font-30">₹ 20/uT</ion-label><br>
+          <hr>
+          <ion-label>Total loss : ₹ 10</ion-label><br>
+        </ion-card-content>
+      </ion-card>
+      <ion-card *ngIf="!selected[1]" (click)="goBack(1)" class="padding-0 page-card">
+        <ion-card-content text-center>
+          <ion-label>Agreed Rate : ₹ 130</ion-label><br>
+          <hr>
+          <ion-label class="font-30">₹ 20/uT</ion-label><br>
+          <hr>
+          <ion-label>Total loss : ₹ 10</ion-label><br>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <hr>
+
+  <ion-row text-center class="white-fonts padding-0">
+    <ion-col col-4>
+      <ion-label>
+        Rack 1
+      </ion-label>
+    </ion-col>
+    <ion-col col-4>
+      <ion-label>
+        Rack 2
+      </ion-label>
+    </ion-col>
+    <ion-col col-4>
+      <ion-label>
+        Rack 3
+      </ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="padding-0">
+    <ion-col col-4>
+      <ion-card (click)="goBack(2)" *ngIf="selected[2]" color="primary" class="padding-0 page-card">
+        <ion-card-content text-center>
+          <ion-label>Agreed Rate: ₹ 130</ion-label><br>
+          <hr>
+          <ion-label class="font-20">₹ 20/uT</ion-label><br>
+          <hr>
+          <ion-label>Total loss: ₹ 10</ion-label><br>
+        </ion-card-content>
+      </ion-card>
+      <ion-card (click)="goBack(2)" *ngIf="!selected[2]" class="padding-0 page-card">
+        <ion-card-content text-center>
+          <ion-label>Agreed Rate: ₹ 130</ion-label><br>
+          <hr>
+          <ion-label class="font-20">₹ 20/uT</ion-label><br>
+          <hr>
+          <ion-label>Total loss: ₹ 10</ion-label><br>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col col-4>
+      <ion-card (click)="goBack(3)" *ngIf="selected[3]" color="primary" class="padding-0 page-card">
+        <ion-card-content text-center>
+          <ion-label>Agreed Rate: ₹ 130</ion-label><br>
+          <hr>
+          <ion-label class="font-20">₹ 20/uT</ion-label><br>
+          <hr>
+          <ion-label>Total loss: ₹ 10</ion-label><br>
+        </ion-card-content>
+      </ion-card>
+      <ion-card (click)="goBack(3)" *ngIf="!selected[3]" class="padding-0 page-card">
+        <ion-card-content text-center>
+          <ion-label>Agreed Rate: ₹ 130</ion-label><br>
+          <hr>
+          <ion-label class="font-20">₹ 20/uT</ion-label><br>
+          <hr>
+          <ion-label>Total loss: ₹ 10</ion-label><br>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col col-4>
+      <ion-card (click)="goBack(4)" *ngIf="selected[4]" color="primary" class="padding-0 page-card">
+        <ion-card-content text-center>
+          <ion-label>Agreed Rate: ₹ 130</ion-label><br>
+          <hr>
+          <ion-label class="font-20">₹ 20/uT</ion-label><br>
+          <hr>
+          <ion-label>Total loss: ₹ 10</ion-label><br>
+        </ion-card-content>
+      </ion-card>
+      <ion-card (click)="goBack(4)" *ngIf="!selected[4]" class="padding-0 page-card">
+        <ion-card-content text-center>
+          <ion-label>Agreed Rate: ₹ 130</ion-label><br>
+          <hr>
+          <ion-label class="font-20">₹ 20/uT</ion-label><br>
+          <hr>
+          <ion-label>Total loss: ₹ 10</ion-label><br>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

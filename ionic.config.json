@@ -1,6 +1,8 @@
 {
   "name": "gsfc",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "0e9f85e7"
 }

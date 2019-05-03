@@ -1,4 +1,58 @@
-.welcome-card ion-img {
-  max-height: 35vh;
-  overflow: hidden;
+:host{
+
+.main-view {
+  height: 100%
+}
+
+.welcome-card {
+  height: 45%;
+  --background: white;
+  color: black;
+}
+
+ion-label{
+  color: black;
+}
+ion-title{
+  color: black;
+}
+.font-size-50 {
+  font-size: 50px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.custom-title {
+  display: inline-flex;
+}
+
+.home-logo{
+  height: 40px;
+  width: 40px;
+  // border-radius: 20px;
+}
+
+.page-card-content{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.no-padding-margin {
+  padding: 0px;
+  margin: 0px;
+}
+
+.page-content{
+  --background: #555c66;
+}
+
+.text-screen-center {
+  justify-content: center;
+  align-items: center;
+}
 }

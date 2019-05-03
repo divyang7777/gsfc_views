@@ -1,0 +1,176 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Planning Details</ion-title>
+    <ion-button (click)="edit()" slot="end" color="primary">
+      Edit
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-content">
+  <ion-card class="page-card">
+    <ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col text-center>
+            <ion-label class="font-size-35">Planning 01</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col text-center col-4>
+            <ion-card color="danger" class="page-card card-height">
+              <ion-card-content>
+                <ion-label><b>Order</b></ion-label>
+                <br>
+                <ion-label>₹ 12</ion-label>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col text-center col-4>
+            <ion-card color="danger" class="page-card card-height">
+              <ion-card-content>
+                <ion-label><b>Loss</b></ion-label>
+                <br>
+                <ion-label>₹ 20k</ion-label>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col text-center col-4>
+            <ion-card color="danger" class="page-card card-height">
+              <ion-card-content>
+                <ion-label><b>Dest.</b></ion-label>
+                <br>
+                <ion-label>10</ion-label>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-searchbar></ion-searchbar>
+      <ion-list>
+        <ion-item-divider>
+          <ion-col text-center>
+            <b>Consolidated Details</b>
+          </ion-col>
+        </ion-item-divider>
+        <ion-item text-center>
+          <ion-col col-3>
+            <ion-label><b>Dest.</b></ion-label>
+          </ion-col>
+          <ion-col col-3>
+            <ion-label><b>Product</b></ion-label>
+          </ion-col>
+          <ion-col col-3>
+            <ion-label><b>Qty.</b></ion-label>
+          </ion-col>
+          <ion-col text-center col-3>
+            <ion-label class="ion-float-right"><b>Loss</b></ion-label>
+          </ion-col>
+        </ion-item>
+        <ion-item-divider color="light" class="padding-0 width-100 page-content">
+          <ion-label>
+            Rosy Port => kankaria
+          </ion-label>
+        </ion-item-divider>
+        <ion-item text-center>
+          <ion-col col-3>
+            <ion-label>kankaria</ion-label>
+          </ion-col>
+          <ion-col col-3>
+            <ion-label>DAP</ion-label>
+          </ion-col>
+          <ion-col col-3>
+            <ion-label>200 T</ion-label>
+          </ion-col>
+          <ion-col col-3s>
+            <ion-label class="ion-float-right">₹ 20,000</ion-label>
+          </ion-col>
+        </ion-item>
+        <ion-item text-center>
+          <ion-col col-3>
+            <ion-label>Rosy Port</ion-label>
+          </ion-col>
+          <ion-col col-3>
+            <ion-label>Urea</ion-label>
+          </ion-col>
+          <ion-col col-3>
+            <ion-label>200 T</ion-label>
+          </ion-col>
+          <ion-col col-3>
+            <ion-label class="ion-float-right">₹ 20,000</ion-label>
+          </ion-col>
+        </ion-item>
+
+        <ion-item-divider color="light" class="padding-0 width-100 page-content">
+          <ion-label>
+            Baroda => Baroda
+          </ion-label>
+        </ion-item-divider>
+        <ion-item text-center>
+          <ion-col col-3>
+            <ion-label>Baroda</ion-label>
+          </ion-col>
+          <ion-col col-3>
+            <ion-label>DAP</ion-label>
+          </ion-col>
+          <ion-col col-3>
+            <ion-label>100 T</ion-label>
+          </ion-col>
+          <ion-col col-3>
+            <ion-label class="ion-float-right">₹ 1,000</ion-label>
+          </ion-col>
+        </ion-item>
+        <ion-item text-center lines="none">
+          <ion-col col-3>
+            <ion-label>Baroda</ion-label>
+          </ion-col>
+          <ion-col col-3>
+            <ion-label>Urea</ion-label>
+          </ion-col>
+          <ion-col col-3>
+            <ion-label>200 T</ion-label>
+          </ion-col>
+          <ion-col col-3>
+            <ion-label class="ion-float-right">₹ 20,000</ion-label>
+          </ion-col>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-fab slot="fixed" vertical="bottom" horizontal="end" #fab>
+  <ion-fab-button>
+    <ion-icon name="arrow-dropup"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <button ion-fab (click)="delete()">
+      <ion-label>Delete</ion-label>
+      <ion-icon name="trash"></ion-icon>
+    </button>
+    <button ion-fab (click)="excelDownload()">
+      <ion-label>Excel</ion-label>
+      <ion-icon name="attach"></ion-icon>
+    </button>
+    <button ion-fab (click)="pdfDownload()">
+      <ion-label>PDF</ion-label>
+      <ion-icon name="book"></ion-icon>
+    </button>
+    <button ion-fab [routerLink]="['/part-two-simulation']">
+      <ion-label>Simulate</ion-label>
+      <ion-icon name="clipboard"></ion-icon>
+    </button>
+    <button ion-fab (click)="email()">
+      <ion-label>Mail</ion-label>
+      <ion-icon name="mail"></ion-icon>
+    </button>
+  </ion-fab-list>
+</ion-fab>

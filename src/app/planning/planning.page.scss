@@ -1,0 +1,31 @@
+:host {
+  .bottom-height {
+    margin-bottom: 50;
+    // height: 50px;
+}
+.page-content{
+    --background: #555c66;
+  }
+
+  .no-wall {
+    --background: none;
+    background: none;
+  }
+
+.page-card{
+    --background: rgb(223, 223, 223);
+    font-size: 30px !important;
+    color: black;
+  }
+  
+  ion-label{
+    color: black;
+  }
+  ion-title{
+    color: black;
+  }
+
+.font-20 {
+  font-size: 30;
+}
+}

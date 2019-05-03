@@ -1,0 +1,51 @@
+
+.commonHeight{
+    height: 100px;
+}
+
+.marginLabel {
+    margin-bottom: 15%;
+}
+
+.boxLabel {
+    background-color:rgba(255, 255, 255, 0.4);
+    height: 60px;
+    padding-top: 20px;
+}
+
+:host {
+    .page-toolbar{
+        --background: rgba(57, 86, 8, 1);
+        color: white;
+    }
+    // .page-content{
+    //     --background: rgba(255, 255, 255, 0.5);
+    // }
+    // .page-button{
+    //     --background: green;
+    //     --background-focused: green;
+    // }
+    .page-card{
+        background-color: white;
+    }
+    .page-items{
+        --background: none;
+        // color: white;
+        .item-highlight{
+            background-color: white;
+        }
+    }
+    .required::after {
+        content: "*";
+        color: red;
+        position: relative;
+        top: -.6em;
+    }
+    .width-100{
+        width: 100%;
+    }
+    .no-padding-margin {
+        margin: 0px;
+        padding: 0px;
+    }
+}

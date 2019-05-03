@@ -1,0 +1,19 @@
+@import '../theme/fonts';
+
+:host {
+    .background-color {
+        background-color: #efeff0;
+        --background: #efeff0;
+    }
+}
+        .background-color {
+            // background-color: #efeff0;
+            --background: #efeff0;
+        }
+// .wall {
+//     background-image: url('../assets/images/blur-golf-course.jpg');
+//         --background: none;
+//         background-repeat: no-repeat;
+//         background-size: cover;
+//         background-position: center;
+// }

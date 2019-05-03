@@ -1,0 +1,24 @@
+.bottom-height {
+    margin-bottom: 50;
+    // height: 50px;
+}
+.page-content{
+    --background: #555c66;
+  }
+
+  .no-wall {
+    --background: none;
+    background: none;
+  }
+
+.page-card{
+    --background: white;
+    color: black;
+    font-size: 30px !important;
+}
+ion-label{
+  color: black;
+}
+ion-title{
+  color: black;
+}

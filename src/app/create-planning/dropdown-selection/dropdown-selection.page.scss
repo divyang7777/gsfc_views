@@ -1,0 +1,60 @@
+// :host {
+//     .padding-left-10 {
+//         padding-left: 10 !important;
+//     }
+
+//     .width-100 {
+//         width: 100%;
+//     }
+//     .page-content{
+//         --background: none;
+//       }
+
+//       .page-card{
+//         --background: white;
+//     }
+// }
+
+:host{
+    .page-toolbar{
+      --background: rgba(57, 86, 8,1);
+      color: white;
+  }
+  .page-content{
+      --background: #555c66;
+  }
+  .page-card{
+      background-color: white;
+      color: black;
+  }
+  ion-label{
+    color: black;
+  }
+  ion-title{
+    color: black;
+  }
+  ion-select {
+        max-width: 100%;
+  }
+    }
+
+    .required::after {
+      content: "*";
+      color: red;
+      position: relative;
+  }
+    .greenColor{
+        --background: rgba(57, 86, 8,1);
+        --background-focused: rgba(57, 86, 8,1);
+      }
+
+      .width-100{
+        width: 100%;
+      }
+      .no-padding-margin {
+        margin: 0px;
+        padding: 0px;
+    }
+    .padidng-left-10{
+        padding-left: 10px;
+    }
