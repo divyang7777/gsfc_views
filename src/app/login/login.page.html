@@ -14,12 +14,12 @@
 </ion-header>
 
 <ion-content class="page-content backgroundBlur" padding>
-  <!-- <img class="center-logo" src="./assets/logo.png" alt="LOGO"> -->
   <ion-card class="page-card">
     <ion-card-content class="ion-no-padding">
 
       <ion-grid>
         <form [formGroup]="loginForm">
+          <br>
           <ion-item lines="none">
             <ion-col size="4">
               <ion-label class="required">Email</ion-label>
@@ -50,7 +50,7 @@
     </ion-card-content>
   </ion-card>
   <ion-col>
-    <ion-label padding (click)="forgotPassword()" color="danger" class="item-highlight">
+    <ion-label padding (click)="forgotPassword()" color="primary" class="item-highlight">
       Forgot Password ?
     </ion-label>
   </ion-col>
