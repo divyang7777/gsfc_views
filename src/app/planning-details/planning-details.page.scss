@@ -13,6 +13,16 @@ ion-title{
   color: black;
 }
 
+.custom-title {
+  display: inline-flex;
+}
+
+.home-logo{
+  height: 40px;
+  width: 40px;
+  // border-radius: 20px;
+}
+
 .font-size-35 {
   font-size: 35px;
 }

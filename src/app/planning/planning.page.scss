@@ -13,7 +13,7 @@
   }
 
 .page-card{
-    --background: rgb(223, 223, 223);
+    --background: white;
     font-size: 30px !important;
     color: black;
   }
@@ -27,5 +27,14 @@
 
 .font-20 {
   font-size: 30;
+}
+.custom-title {
+  display: inline-flex;
+}
+
+.home-logo{
+  height: 40px;
+  width: 40px;
+  // border-radius: 20px;
 }
 }

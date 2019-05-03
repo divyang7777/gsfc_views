@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx';
     StatusBar,
     SplashScreen,
     EmailComposer,
+    NativeStorage,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

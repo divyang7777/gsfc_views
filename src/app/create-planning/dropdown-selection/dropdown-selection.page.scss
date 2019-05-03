@@ -23,6 +23,9 @@
   .page-content{
       --background: #555c66;
   }
+  .centerCard{
+    margin-top: 40%;
+  }
   .page-card{
       background-color: white;
       color: black;
@@ -57,4 +60,13 @@
     }
     .padidng-left-10{
         padding-left: 10px;
+    }
+    .custom-title {
+      display: inline-flex;
+    }
+    
+    .home-logo{
+      height: 40px;
+      width: 40px;
+      // border-radius: 20px;
     }

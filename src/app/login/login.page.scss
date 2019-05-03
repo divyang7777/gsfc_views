@@ -12,29 +12,24 @@
     height: 60px;
     padding-top: 20px;
 }
+.center-logo{
+    height: 50;
+    width: 50;
+    // border-radius: 30;
+    // background-color: white;
+}
 
 :host {
-    .page-toolbar{
-        --background: rgba(57, 86, 8, 1);
-        color: white;
-    }
-    // .page-content{
-    //     --background: rgba(255, 255, 255, 0.5);
-    // }
-    // .page-button{
-    //     --background: green;
-    //     --background-focused: green;
-    // }
+    .page-content{
+        --background: #555c66;
+      }
     .page-card{
+        margin-top: 50%;
         background-color: white;
     }
-    .page-items{
-        --background: none;
-        // color: white;
-        .item-highlight{
-            background-color: white;
-        }
-    }
+            .item-highlight{
+                color: white;
+            }
     .required::after {
         content: "*";
         color: red;
@@ -48,4 +43,14 @@
         margin: 0px;
         padding: 0px;
     }
+
+    .custom-title {
+        display: inline-flex;
+      }
+      
+      .home-logo{
+        height: 40px;
+        width: 40px;
+        // border-radius: 20px;
+      }
 }

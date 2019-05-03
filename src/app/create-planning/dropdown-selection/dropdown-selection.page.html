@@ -3,12 +3,17 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{header}} Order Details</ion-title>
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="custom-title no-padding-margin">
+        <img class="home-logo" src="./assets/logo.png" alt="LOGO">
+        <ion-label align-self-center class="font-size-20"><b>{{header}} Order Details</b></ion-label>
+      </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="page-content">
-  <ion-card class="page-card">
+  <ion-card class="centerCard page-card">
     <ion-card-content padding>
 
       <ion-item lines="none">
@@ -61,7 +66,7 @@
         </ion-col>
         <ion-row class="width-100">
           <ion-col align-items-start>
-            <ion-input  placeholder="please give Quantity" [(ngModel)]="quantity"></ion-input>
+            <ion-input placeholder="please give Quantity" [(ngModel)]="quantity"></ion-input>
           </ion-col>
         </ion-row>
       </ion-item>
@@ -71,14 +76,14 @@
 </ion-content>
 <ion-footer class="page-card">
   <ion-row text-center>
-    <ion-col>
-      <ion-button (click)="delete()" color="danger">Delete</ion-button>
+    <ion-col *ngIf="header === 'Edit'">
+      <ion-button expand="full" (click)="delete()" color="primary">Delete</ion-button>
     </ion-col>
     <ion-col>
-      <ion-button (click)="goBack()" color="success">Save</ion-button>
+      <ion-button expand="full" (click)="goBack()" color="danger">Cancle</ion-button>
     </ion-col>
     <ion-col>
-      <ion-button (click)="goBack()" color="primary">Cancel</ion-button>
+      <ion-button expand="full" (click)="goBack()" color="primary">Save</ion-button>
     </ion-col>
   </ion-row>
 </ion-footer>

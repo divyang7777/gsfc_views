@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController, NavController } from '@ionic/angular';
+import { ModalController, NavController, AlertController } from '@ionic/angular';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -17,6 +17,7 @@ export class CreatePlanningPage implements OnInit {
     public route: ActivatedRoute,
     public router: Router,
     public navCtrl: NavController,
+    public alert: AlertController,
   ) {
     const isEdit = this.route.snapshot.queryParams.edit;
     isEdit === 'true' ? this.header = 'Edit' : this.header = 'Create';
@@ -29,6 +30,17 @@ export class CreatePlanningPage implements OnInit {
 
   openEditPlanning() {
     this.router.navigate(['dropdown-selection'], { queryParams: { edit: true } });
+  }
+
+  async delete() {
+    console.log('Delete');
+    const alert = await this.alert.create({
+      header: 'Alert',
+      message: 'Do you really want to Delete?',
+      buttons: ['OK']
+    });
+
+    await alert.present();
   }
 
 }
